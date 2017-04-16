@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.google.code.appsorganizer" android:versionCode="200"
+	package="com.google.code.apps2orgLauncher" android:versionCode="200"
 	android:versionName="1.6.0">
 	<application android:icon="@drawable/icon" android:label="@string/app_name"
-		android:name="AppsOrganizerApplication">
+		android:name="AppsOrganizerApplication"
+		
+		android:theme="@android:style/Theme.Holo.NoActionBar">>
 		<activity android:name=".SplashScreenActivity" android:label="@string/app_name"
 			android:launchMode="singleTask"
             android:stateNotNeeded="true" >
@@ -26,9 +28,9 @@
 
 		<activity android:name=".shortcut.LabelShortcut"
 			android:label="@string/Apps_organizer_label" android:theme="@android:style/Theme.Dialog"
-			android:taskAffinity="com.google.code.appsorganizer.shortcuts">
+			android:taskAffinity="com.google.code.apps2orgLauncher.shortcuts">
 			<intent-filter>
-				<action android:name="com.google.code.appsorganizer.ShortcutAction" />
+				<action android:name="com.google.code.apps2orgLauncher.ShortcutAction" />
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 
