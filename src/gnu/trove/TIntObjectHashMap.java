@@ -295,7 +295,7 @@ public class TIntObjectHashMap<V> extends TIntHash implements Externalizable {
 
     public int hashCode() {
         HashProcedure p = new HashProcedure();
-        forEachEntry(p);
+        //forEachEntry(p);
         return p.getHashCode();
     }
 
