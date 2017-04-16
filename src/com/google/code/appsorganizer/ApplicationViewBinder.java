@@ -41,6 +41,9 @@ import com.google.code.appsorganizer.dialogs.GenericDialogManagerActivity;
  * @author fabio
  * 
  */
+ 
+ // item view da lista de aplicacoes e label
+ 
 public class ApplicationViewBinder implements ViewBinder {
 
 	public static final String[] COLS = new String[] { AppCacheDao.ID_COL_NAME, AppCacheDao.LABEL_COL_NAME, AppCacheDao.NAME_COL_NAME,
@@ -138,6 +141,7 @@ public class ApplicationViewBinder implements ViewBinder {
 		addOnClickListener(view, cursor);
 	}
 
+	// click simples em um item da lista
 	private void addOnClickListener(View view, final Cursor cursor) {
 		final String packageName = cursor.getString(PACKAGE);
 		final String name = cursor.getString(NAME);
@@ -161,7 +165,10 @@ public class ApplicationViewBinder implements ViewBinder {
 		});
 	}
 
+	// Rafael
 	public void onItemClick(final String packageName, final String name) {
+		
+		/*
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 		String defaultAction = prefs.getString("defaultAction", "choose_labels");
 		if (defaultAction.equals("choose_labels")) {
@@ -172,5 +179,12 @@ public class ApplicationViewBinder implements ViewBinder {
 		} else {
 			ApplicationContextMenuManager.startApplication(context, packageName, name);
 		}
+		
+		*/
+		
+		ApplicationContextMenuManager.startApplication(context, packageName, name);
+		
+		
+		
 	}
 }

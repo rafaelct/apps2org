@@ -295,7 +295,8 @@ public class TLongObjectHashMap<V> extends TLongHash implements Externalizable {
 
     public int hashCode() {
         HashProcedure p = new HashProcedure();
-        //forEachEntry(p);
+        // rafael
+		//forEachEntry(p);
         return p.getHashCode();
     }
 

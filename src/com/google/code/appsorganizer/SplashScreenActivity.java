@@ -47,6 +47,8 @@ import com.google.code.appsorganizer.dialogs.GenericDialogManager;
 import com.google.code.appsorganizer.dialogs.ListActivityWithDialog;
 import com.google.code.appsorganizer.dialogs.OnOkClickListener;
 import com.google.code.appsorganizer.dialogs.SimpleDialog;
+import android.widget.*;
+import android.net.*;
 
 public class SplashScreenActivity extends ListActivityWithDialog {
 
@@ -67,6 +69,8 @@ public class SplashScreenActivity extends ListActivityWithDialog {
 
 	private ToggleButton appButton;
 
+	private Button donate;
+	
 	private OptionMenuManager optionMenuManager;
 
 	@Override
@@ -110,6 +114,16 @@ public class SplashScreenActivity extends ListActivityWithDialog {
 			}
 		});
 
+		
+		donate = (Button) findViewById( R.id.donate );
+
+		donate.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mobile.paypal.com/br/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token=EC-3D834900EA210062J#m"));
+					startActivity(browserIntent);
+				}
+			});
+		
 		labelButton = (ToggleButton) findViewById(R.id.labelButton);
 		appButton = (ToggleButton) findViewById(R.id.appButton);
 		labelButton.setOnClickListener(new OnClickListener() {

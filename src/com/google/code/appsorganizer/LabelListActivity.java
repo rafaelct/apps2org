@@ -54,6 +54,10 @@ import com.google.code.appsorganizer.dialogs.SimpleDialog;
 import com.google.code.appsorganizer.dialogs.TextEntryDialog;
 import com.google.code.appsorganizer.model.Label;
 import com.google.code.appsorganizer.shortcut.ShortcutCreator;
+import android.widget.*;
+import android.net.*;
+
+// item de grupo da lista de labels
 
 public class LabelListActivity extends ExpandableListActivityWithDialog implements GenericDialogManagerActivity {
 	private static final int MENU_ITEM_SELECT_APPS = 2;
@@ -78,6 +82,8 @@ public class LabelListActivity extends ExpandableListActivityWithDialog implemen
 
 	private ToggleButton appButton;
 
+	private Button donate;
+	
 	private OptionMenuManager optionMenuManager;
 
 	private ConfirmDeleteDialog confirmDeleteDialog;
@@ -115,6 +121,15 @@ public class LabelListActivity extends ExpandableListActivityWithDialog implemen
 		labelAlreadExistsDialog.setShowNegativeButton(false);
 		optionMenuManager = new OptionMenuManager(this, dbHelper, onOkClickListener);
 
+		donate = (Button) findViewById( R.id.donate );
+		
+		donate.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mobile.paypal.com/br/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token=EC-3D834900EA210062J#m"));
+					startActivity(browserIntent);
+				}
+			});
+			
 		labelButton = (ToggleButton) findViewById(R.id.labelButton);
 		appButton = (ToggleButton) findViewById(R.id.appButton);
 		appButton.setOnClickListener(new OnClickListener() {
