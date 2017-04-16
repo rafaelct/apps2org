@@ -100,15 +100,15 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout01=0x7f080002;
-        public static final int about=0x7f08001e;
+        public static final int about=0x7f08001f;
         public static final int appButton=0x7f080013;
         public static final int appwidget_image=0x7f080007;
         public static final int appwidget_text=0x7f080008;
         public static final int author=0x7f080000;
         public static final int buttonPanel=0x7f08000a;
         public static final int cancelButton=0x7f08000c;
-        public static final int closeButton=0x7f080018;
-        public static final int donate=0x7f08001f;
+        public static final int closeButton=0x7f080019;
+        public static final int donate=0x7f080015;
         public static final int export_menu=0x7f080021;
         public static final int filelister_message=0x7f080011;
         public static final int iconGrid=0x7f080012;
@@ -119,19 +119,19 @@ public final class R {
         public static final int labels=0x7f080004;
         public static final int name=0x7f080003;
         public static final int newLabelButton=0x7f08000d;
-        public static final int new_label=0x7f08001a;
+        public static final int new_label=0x7f08001b;
         public static final int okButton=0x7f08000b;
-        public static final int other_apps=0x7f08001d;
-        public static final int preferneces=0x7f08001c;
-        public static final int reload_apps=0x7f08001b;
+        public static final int other_apps=0x7f08001e;
+        public static final int preferneces=0x7f08001d;
+        public static final int reload_apps=0x7f08001c;
         public static final int sendEmailButton=0x7f080009;
-        public static final int shortcutGrid=0x7f080019;
-        public static final int shortcutLayout=0x7f080015;
+        public static final int shortcutGrid=0x7f08001a;
+        public static final int shortcutLayout=0x7f080016;
         public static final int starCheck=0x7f080005;
         public static final int text_entry_edit=0x7f080010;
         public static final int text_entry_label=0x7f08000f;
-        public static final int title=0x7f080017;
-        public static final int titleLayout=0x7f080016;
+        public static final int title=0x7f080018;
+        public static final int titleLayout=0x7f080017;
         public static final int widget=0x7f080006;
     }
     public static final class layout {

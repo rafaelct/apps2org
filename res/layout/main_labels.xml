@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
-	<LinearLayout android:id="@+id/LinearLayout01"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
+
+	<LinearLayout
+		android:id="@+id/LinearLayout01"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
 		android:orientation="horizontal">
-		<ToggleButton android:id="@+id/appButton"
-			android:layout_width="fill_parent" android:checked="false"
-			android:layout_height="wrap_content" android:textOn="@string/tab_apps"
-			android:textOff="@string/tab_apps" android:layout_weight="1" />
-		<ToggleButton android:id="@+id/labelButton"
-			android:layout_width="fill_parent" android:checked="true"
-			android:layout_height="wrap_content" android:textOff="@string/tab_labels"
-			android:textOn="@string/tab_labels" android:layout_weight="1" />
+
+		<ToggleButton
+			android:id="@+id/appButton"
+			android:layout_width="fill_parent"
+			android:checked="false"
+			android:layout_height="wrap_content"
+			android:textOn="@string/tab_apps"
+			android:textOff="@string/tab_apps"
+			android:layout_weight="1"/>
+
+		<ToggleButton
+			android:id="@+id/labelButton"
+			android:layout_width="fill_parent"
+			android:checked="true"
+			android:layout_height="wrap_content"
+			android:textOff="@string/tab_labels"
+			android:textOn="@string/tab_labels"
+			android:layout_weight="1"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Donate"
+			android:id="@+id/donate"/>
+
 	</LinearLayout>
-	<ExpandableListView android:id="@+id/android:list" android:layout_width="fill_parent"
-		android:layout_height="wrap_content" />
+
+	<ExpandableListView
+		android:id="@+id/android:list"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
 
 </LinearLayout>
-
 
